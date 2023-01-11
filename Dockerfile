@@ -69,7 +69,7 @@ RUN make install
 
 RUN useradd -r nginx
 
-RUN mkdir -p /var/cache/nginx/client_temp && chown nginx:nginx /var/cache/nginx/client_temp
+RUN mkdir -p /var/cache/nginx/client_temp /var/log/pagespeed && chown nginx:nginx /var/cache/nginx/client_temp /var/log/pagespeed
 
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
 
