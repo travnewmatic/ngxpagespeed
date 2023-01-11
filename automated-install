@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# stolen from https://www.modpagespeed.com/doc/build_ngx_pagespeed_from_source
-
-bash <(curl -f -L -sS https://ngxpagespeed.com/install) -y --nginx-version 1.22.1
