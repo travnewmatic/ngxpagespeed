@@ -18,6 +18,8 @@ RUN wget -O- http://nginx.org/download/nginx-1.22.1.tar.gz | tar -xz
 
 WORKDIR /tmp/nginx-1.22.1
 
+# This command, with the exception of the '--add-module=/tmp/incubator-pagespeed-ngx-1.14.33.1-RC1'
+# bit came from the output of 'nginx -V' in the official current docker image.
 RUN ./configure --add-module=/tmp/incubator-pagespeed-ngx-1.14.33.1-RC1 \
   --prefix=/etc/nginx \
   --sbin-path=/usr/sbin/nginx \
